@@ -1,44 +1,37 @@
 import React from 'react';
 import { CanvasJSChart } from 'canvasjs-react-charts';
-const BarChart = ({data}) => {
+
+const BarChart = ({ data }) => {
   const options = {
     animationEnabled: true,
-    height:260,
-    //exportEnabled: true,
-    theme: "light2", //"light1", "dark1", "dark2"
-    axisY:{
-      gridThickness:0,
-      tickLength:0,
-      labelFormatter: function(){
+    height: 260,
+    theme: "light2",
+    axisY: {
+      gridThickness: 0,
+      tickLength: 0,
+      labelFormatter: function () {
         return '';
       }
-
     },
-    axisX:{
-
-    },
+    axisX: {},
     title: {
-      text: `OverView Monthly Earning`,
+      text: `OverView Monthly Earnings`,
       horizontalAlign: "left",
       maxWidth: 300
     },
-
     data: [
       {
         type: "column",
-        dataPoints: data
-
+        dataPoints: data // This should be dataPoints, not data
       }
     ]
   };
+
   return (
     <div>
-      <CanvasJSChart data={data} options={options} />
+      <CanvasJSChart options={options} />
     </div>
-  )
-}
-
+  );
+};
 
 export default BarChart;
-
-
