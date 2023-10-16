@@ -59,7 +59,7 @@ const SideBar = () => {
         <Bars setShow={setShowSideBar} show={showSideBar} />
             <div className={showSideBar ? 'sidebar p-3 col-lg-2 col-md-3 open ' : 'sidebar p-3 col-lg-2 col-md-3'} onClick={closeSidebar} >
                 
-                <div className='d-flex justify-content-center align-items-center'>
+                <div className='d-flex justify-content-start align-items-center'>
                     <FaCog size={20} />
                     <h1 className='ms-2'>Dashboard</h1>
                 </div>
